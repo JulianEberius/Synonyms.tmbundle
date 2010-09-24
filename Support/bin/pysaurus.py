@@ -16,10 +16,10 @@ def _filter_and_to_dict(out_lines):
     return {}
   limits = []
   for i, l in enumerate(out_lines):
-    if l.strip() in ["noun","verb","adjective"]:
+    if l.strip() in ["noun","verb","adjective","adverb"]:
       limits.append(i)
   parts = []
-  if len(limits) == 1:
+  if len(limits) <= 1:
     parts = [(out_lines[0],out_lines[1:])]
   else:
     for x in range(len(limits)-1):

@@ -31,6 +31,7 @@ def register_completion_images():
     images = {
         "noun"   : icon_dir+"/Noun.png",
         "adjective" : icon_dir+"/Adjective.png",
+        "adverb" : icon_dir+"/Adverb.png",
         "verb"   : icon_dir+"/Verb.png",
         "None"    : icon_dir+"/None.png",
     }
