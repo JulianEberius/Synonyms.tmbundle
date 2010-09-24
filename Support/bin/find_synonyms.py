@@ -8,6 +8,10 @@ import pysaurus
 
 TM_DIALOG2 = os.environ['DIALOG']
 
+def tooltip(text):
+    options = {'text':str(text)}
+    call_dialog(TM_DIALOG2+" tooltip", options)
+
 def completion_popup(proposals, already_typed=None):
     command = TM_DIALOG2+" popup"
     options = [dict([['display',p.name], 
@@ -43,7 +47,7 @@ if not term:
 
 data = pysaurus.get_synonyms(term,24)
   
-if hasattr(data, "__iter__"):
+if hasattr(data, "__iter__") and len(data)>1:
   index = reduce(lambda acc, item: item if item.name==term else None,
                   data, None)
   if index:
@@ -53,4 +57,5 @@ if hasattr(data, "__iter__"):
   register_completion_images()
   completion_popup(data)
 else:
+  tooltip("No synonyms found")
   sys.stdout.write(term)
