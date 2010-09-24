@@ -1,0 +1,17 @@
+**Synonyms.tmbundle**
+===========================
+Uses the OSX dictionary / thesaurus to find synonyms of the word under
+the cursor and displays them as autocompletion proposals.
+
+Many thanks to StackOverflow user Nicholas Riley (http://stackoverflow.com/questions/784549/using-dictionary-apps-thesaurus-function-programmatically-on-osx-preferably-via)
+for his CLI interface to Dictionary.app (thesaurus.m)!
+
+Copyright (C) 2010 Julian Eberius
+
+License: 
+MIT License (see LICENSE.txt)
+Have a look at "LICENSE.txt" file for more information.
+
+TODOs:
+- Antonyms not filtered correctly
+- phrases
