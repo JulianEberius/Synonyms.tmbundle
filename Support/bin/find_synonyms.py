@@ -14,7 +14,7 @@ def tooltip(text):
 
 def completion_popup(proposals, already_typed=None):
     command = TM_DIALOG2+" popup"
-    options = [dict([['display',p.name], 
+    options = [dict([['display',p.name.decode('utf-8')], 
                     ['image', p.type if p.type else "None"]])
                     for p in proposals]
     call_dialog(command, {'suggestions' : options})
